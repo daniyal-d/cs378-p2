@@ -85,6 +85,7 @@ function App() {
     <div className="container py-5">
       {/* Pass the header props here */}
       <Header
+        webTitle="P2 - Campus Cafe"
         logoPath="images/os-campus-cafe-logo-2x.png"
         cursiveText="Delicious, From-Scratch Recipes Close at Hand"
         subHeadingText="The Fresh Choice of UT!"

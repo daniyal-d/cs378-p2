@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function Header({ logoPath, cursiveText, subHeadingText }) {
+function Header({ webTitle, logoPath, cursiveText, subHeadingText }) {
+    useEffect(() => {
+        document.title = webTitle;
+        }, [webTitle]);
+
   return (
     <div className="text-center mb-4">
       {/* Logo */}
