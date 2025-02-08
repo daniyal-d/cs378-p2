@@ -5,7 +5,7 @@ import React from 'react';
 // Use bootstrap to style the elements so that it looks like the mockup in the assignment.
 // Hint: You can use the image name to get the image from the images folder.
 function MenuItem({ title, description, imageName, price }) {
-    const imagePath = `images/${imageName}`;
+  const imagePath = `${process.env.PUBLIC_URL}/images/${imageName}`;
   
     return (
       <div className="col-12 d-flex align-items-center">

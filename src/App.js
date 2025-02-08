@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/Header'
 import MenuItem from './components/MenuItem';
 
 // import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
@@ -82,24 +83,17 @@ const menuItems = [
 function App() {
   return (
     <div className="container py-5">
-      {/* Header */}
-      <div className="text-center mb-4">
-        {/* Logo (ensure the file is placed correctly under public/assets) */}
-        <img 
-          src="images/os-campus-cafe-logo-2x.png" 
-          alt="Campus Cafe Logo" 
-          className="logo mb-3" 
-        />
-        {/* Cursive subheader */}
-        <p className="c-subhead">Delicious, From-Scratch Recipes Close at Hand</p>
-        {/* Subhead */}
-        <h2 className="subhead">The Fresh Choice of UT!</h2>
-      </div>
+      {/* Pass the header props here */}
+      <Header
+        logoPath="images/os-campus-cafe-logo-2x.png"
+        cursiveText="Delicious, From-Scratch Recipes Close at Hand"
+        subHeadingText="The Fresh Choice of UT!"
+      />
 
       {/* Menu items */}
       <div className="row g-4">
         {menuItems.map((item) => (
-          <MenuItem 
+          <MenuItem
             key={item.id}
             title={item.title}
             description={item.description}
