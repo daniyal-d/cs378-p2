@@ -81,11 +81,32 @@ const menuItems = [
 
 function App() {
   return (
-    <div>
-      <h1>Menu</h1>
-      <div className="menu">
-        {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        <MenuItem title={menuItems[0].title} /> {/* Example for how to use a component */}
+    <div className="container py-5">
+      {/* Header */}
+      <div className="text-center mb-4">
+        {/* Logo (ensure the file is placed correctly under public/assets) */}
+        <img 
+          src="images/os-campus-cafe-logo-2x.png" 
+          alt="Campus Cafe Logo" 
+          className="logo mb-3" 
+        />
+        {/* Cursive subheader */}
+        <p className="c-subhead">Delicious, From-Scratch Recipes Close at Hand</p>
+        {/* Subhead */}
+        <h2 className="subhead">The Fresh Choice of UT!</h2>
+      </div>
+
+      {/* Menu items */}
+      <div className="row g-4">
+        {menuItems.map((item) => (
+          <MenuItem 
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            imageName={item.imageName}
+            price={item.price}
+          />
+        ))}
       </div>
     </div>
   );
